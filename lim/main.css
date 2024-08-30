@@ -1,0 +1,46 @@
+video.justvideo {
+    max-width: 50%;
+    width: 160px;
+    border: 4px;
+    border-color: #04f004e8;
+}
+
+video.localvideo {
+    max-width: 50%;
+    width: 160px;
+    border-color: blue;
+    border-width: 10px;
+    filter: blur(4px) invert(1) opacity(0.5) hue-rotate(180deg) saturate(200%);
+    -webkit-filter: blur(4px) invert(0) opacity(0.5) hue-rotate(180deg) saturate(200%);
+}
+
+video.limvideo {
+    max-width: 50%;
+    width: 320px;
+    border-color: blue;
+    border-width: 10px;
+}
+
+video.remotevideo {
+    max-width: 50%;
+    width: 160px;
+    border-color: rgb(255, 72, 0);
+    border-width: 10px;
+    filter: blur(1px) invert(1) opacity(0.25) hue-rotate(20deg) saturate(200%);
+    -webkit-filter: blur(1px) invert(0) opacity(0.25) hue-rotate(20deg) saturate(50%);
+}
+
+video.other {
+    filter: blur(2px) invert(1) opacity(0.75) hue-rotate(90deg) saturate(50%);
+    -webkit-filter: blur(2px) invert(1) opacity(0.75) hue-rotate(90deg) saturate(50%);
+}
+
+button {
+    color: #154be2;
+}
+
+textarea {
+    background-color: #f1c0c0;
+    font-size: 12px;
+    border-color: #330033;
+}

@@ -1,0 +1,24 @@
+html    
+    head
+        title  RealTime Communication between Chrome browsers
+        link(rel="stylesheet",href="../lim/main.css")
+    body
+        h1 Realtime Communication with WebRTC step-1
+
+        br
+        button#startButton Start
+        button#connectButton   Connect
+        button#disconnectButton Disconnect   
+        br
+        hr
+
+        video.justvideo(autoplay='true')
+        br
+        video.localvideo#localVideo(autoplay='true')
+        br
+        video.remotevideo#remoteVideo(autoplay='true')
+        br
+        script(src='../js/lib/adapter.js')
+        script(src='../lim/main.js')
+
+        

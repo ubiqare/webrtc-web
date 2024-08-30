@@ -1,0 +1,81 @@
+html
+    head
+        title Stream Settings 
+        //link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstram.min.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",crossorigin="anonymous")
+        link(rel="stylesheet",href="../lim/camsband.css")
+    body
+        h3 Streams 
+        #container
+            .row    
+            h2 WebRTC getUserMedia Camera Resolution
+            #selectArea(hidden='false')
+                h4 Cameras available
+                select#devices(name='Video Cameras',multiple='true',title='Cameras')
+            h4 Use one of the button
+            .row#controlArea
+                .col-sm-6.scanarea.well.well-sm#quickArea
+                    button.btn.btn-primary.btn-block#quickButton    
+                        | QuickScan
+                    #quickLabel
+                .col-sm-6.scanarea.well.well-sm#fullArea
+                    button.btn.btn-primary.btn-block.btn-warning#fullButton    
+                        | FullScan
+                    p Vertical Resolution Range
+                    span
+                        | max:
+                        input#hiRes(type='text',value='1080',size='4',maxlengt='4',min='1',max='2160')
+                        | to Min:
+                        input#lowRes(type='text',value='1',size='4',maxlengt='4',min='1',max='2160')
+            .row#videoarea  
+                video.justvideo#video(autoplay='true')
+            .row
+                p#jump(hidden='true') Jump To 
+                    a(href='#bottom') Bottom
+                    | of table
+                table.table-condensed.table-bordered.table-striped#results(hidden='false')
+                    tr
+                        th Browser
+                        th Devices
+                        th Resulution
+                        th Ratio
+                        th Ask
+                        th Actual
+                        th Status
+                        th.hidden DeviceIndex
+                        th.hidden ResIndex
+                    h5.pfin(hidden='true')
+                        a(href='.') Refresh
+                        | to run test again with same or different parameters
+                    h5.pfin(hidden='true')
+                        | Export results to a CSV File here 
+                        a#csvOut.btn.btn-link.btn-md(href='#') gunResTestExport.csv
+            #bottom
+            .row    
+                h4 Visit http://webrtchacks.com for more information               
+
+
+
+        .row
+            .col-s-6.scanarea.well.well-sm
+                button.btn.btn-primary.btn-block#battu Show Camera
+            .col-sm6.scanarea.well.well-sm
+                button.btn.btn-primary.btn-block#battuCaps Show Capabilities
+        hr
+        .label Camera1
+        video.limvideo#video1(autoplay='true')
+        textarea#video1text(name="video1 capabilities", cols="30", rows="10")
+        hr
+        br
+        .label Camera2
+        video.limvideo#video2(autoplay='true')
+        textarea#video2text(name="video2caps", cols="30", rows="10")
+        br
+        hr
+        .label Comments
+        label#comments
+        br
+        script(src="https://code.jquery.com/jquery-1.12.4.min.js", integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=", crossorigin="anonymous")
+        // script(src='../js/lib/adapter.js')
+        script(src="https://webrtc.github.io/adapter/adapter-latest.js")
+        script(src='../lim/camsband.js')

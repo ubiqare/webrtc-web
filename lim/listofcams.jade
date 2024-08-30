@@ -1,0 +1,24 @@
+html
+    head
+        title Media Devices
+        link(rel="stylesheet",href="../lim/main.css")
+    body
+        h3 Media Devices
+        button#battu Show Camera
+        button#battuCaps Show Capabilities
+        hr
+        .label Camera1
+        video.limvideo#video1(autoplay='true')
+        textarea#video1text(name="video1 capabilities", cols="30", rows="10")
+        hr
+        br
+        .label Camera2
+        video.limvideo#video2(autoplay='true')
+        textarea#video2text(name="video2caps", cols="30", rows="10")
+        br
+        hr
+        .label Comments
+        label#comments
+        br
+        script(src='../js/lib/adapter.js')
+        script(src='../lim/listofcams.js')
